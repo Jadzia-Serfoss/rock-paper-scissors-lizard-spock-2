@@ -51,6 +51,16 @@ button {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+button:hover {
+  background: radial-gradient(rgb(210, 248, 174), rgb(136, 201, 82));
+}
+
+button:active {
+  background: radial-gradient(rgb(142, 189, 98), rgb(85, 131, 48));
+  transform: translateY(4px);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
 img {
   width: 80px;
   height: 80px;
