@@ -4,6 +4,14 @@ const playerScore = document.querySelector('.player-score');
 const computerScore = document.querySelector('.computer-score');
 const resultDisplay = document.querySelector('.results');
 
+const input = document.querySelector('.input');
+const containerBg = document.querySelector('.container');
+const button1 = document.querySelector('.button1');
+const button2 = document.querySelector('.button2');
+const button3 = document.querySelector('.button3');
+const button4 = document.querySelector('.button4');
+const button5 = document.querySelector('.button5');
+
 let playerScoreNum = '0';
 let computerScoreNum = '0';
 
@@ -40,4 +48,37 @@ function game(playerChoice) {
 
   playerScore.textContent = `${playerScoreNum}`;
   computerScore.textContent = `${computerScoreNum}`;
+}
+
+input.checked = JSON.parse(localStorage.getItem('mode'));
+
+updateMode();
+
+function updateMode() {
+  if (input.checked) {
+    containerBg.style.background = 'linear-gradient(40deg, rgb(238, 156, 49), rgb(105, 12, 89))';
+    button1.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
+    button2.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
+    button3.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
+    button4.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
+    button5.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
+    resultDisplay.style.color = 'rgb(27, 41, 148)';
+  } else {
+    containerBg.style.background = 'linear-gradient(40deg, rgb(3, 3, 64), rgb(1, 1, 14))';
+    button1.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
+    button2.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
+    button3.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
+    button4.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
+    button5.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
+    resultDisplay.style.color = 'rgb(183, 244, 126)';
+  }
+}
+
+input.addEventListener('input', () => {
+  updateMode();
+  updateLocalStorage();
+});
+
+function updateLocalStorage() {
+  localStorage.setItem('mode', JSON.stringify(input.checked));
 }
