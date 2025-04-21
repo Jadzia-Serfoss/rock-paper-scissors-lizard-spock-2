@@ -35,6 +35,7 @@ h1 {
   font-family: "Wallpoet", sans-serif;
   display: flex;
   justify-content: center;
+  margin-top: 5px;
 }
 
 h3 {
@@ -77,4 +78,54 @@ img {
 .results {
   font-size: 2.3rem;
   color: rgb(183, 244, 126);
+}
+
+/* SUN MODE */
+
+.input {
+  visibility: hidden;
+}
+
+.label {
+  position: absolute;
+  width: 70px;
+  height: 35px;
+  background-color: rgb(56, 56, 56);
+  border-radius: 20px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(160, 160, 160);
+  border-radius: 50%;
+  top: 2.4px;
+  left: 2.4px;
+  position: absolute;
+  animation: toggleOff 0.4s linear forwards;
+}
+
+.input:checked + .label .circle {
+  animation: toggleOn 0.4s linear forwards;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(35px);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    transform: translateX(35px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
