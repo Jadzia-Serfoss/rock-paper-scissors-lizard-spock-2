@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(220deg, rgb(169, 168, 168), rgb(67, 66, 66));
+  background: linear-gradient(220deg, rgb(141, 141, 171), rgb(67, 66, 66));
   overflow: hidden;
 }
 
@@ -20,6 +20,7 @@ body {
   margin-right: 110px;
   color: aliceblue;
   background: linear-gradient(40deg, rgb(3, 3, 64), rgb(1, 1, 14));
+  box-shadow: 6px 0 12px rgba(0, 0, 0, 0.8);
 }
 
 .main {
@@ -60,7 +61,7 @@ button:hover {
 button:active {
   background: radial-gradient(rgb(142, 189, 98), rgb(85, 131, 48));
   transform: translateY(4px);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 img {
@@ -100,7 +101,7 @@ img {
 .circle {
   width: 30px;
   height: 30px;
-  background-color: rgb(160, 160, 160);
+  background-color: rgb(141, 141, 171);
   border-radius: 50%;
   top: 2.4px;
   left: 2.4px;
