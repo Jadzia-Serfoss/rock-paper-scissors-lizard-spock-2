@@ -6,11 +6,13 @@ const resultDisplay = document.querySelector('.results');
 
 const input = document.querySelector('.input');
 const containerBg = document.querySelector('.container');
+const body = document.querySelector('body');
 const button1 = document.querySelector('.button1');
 const button2 = document.querySelector('.button2');
 const button3 = document.querySelector('.button3');
 const button4 = document.querySelector('.button4');
 const button5 = document.querySelector('.button5');
+const circle = document.querySelector('.circle');
 
 let playerScoreNum = '0';
 let computerScoreNum = '0';
@@ -62,6 +64,8 @@ function updateMode() {
     button3.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
     button4.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
     button5.style.background = 'radial-gradient(rgb(115, 168, 244), rgb(57, 96, 181))';
+    body.style.background = 'linear-gradient(220deg, rgb(171, 160, 141), rgb(67, 66, 66))';
+    circle.style.background = 'rgb(171, 160, 141)';
     resultDisplay.style.color = 'rgb(27, 41, 148)';
   } else {
     containerBg.style.background = 'linear-gradient(40deg, rgb(3, 3, 64), rgb(1, 1, 14))';
@@ -70,6 +74,8 @@ function updateMode() {
     button3.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
     button4.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
     button5.style.background = 'radial-gradient(rgb(183, 244, 126), rgb(120, 184, 68))';
+    body.style.background = 'linear-gradient(220deg, rgb(141, 141, 171), rgb(67, 66, 66))';
+    circle.style.background = 'rgb(141, 141, 171)';
     resultDisplay.style.color = 'rgb(183, 244, 126)';
   }
 }
